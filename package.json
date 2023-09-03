@@ -1,0 +1,23 @@
+{
+	"name": "swiip-sites",
+	"version": "1.0.0",
+	"description": "Monorepo for Swiip's websites",
+	"type": "module",
+	"scripts": {
+		"ci": "turbo run lint types test",
+		"lint": "turbo run lint",
+		"test": "turbo run test"
+	},
+	"keywords": [
+		"monorepo",
+		"astro",
+		"tailwind"
+	],
+	"author": "Swiip",
+	"license": "MIT",
+	"devDependencies": {
+		"prettier": "3.0.3",
+		"prettier-plugin-astro": "0.12.0",
+		"turbo": "1.10.13"
+	}
+}

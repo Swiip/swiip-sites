@@ -1,0 +1,26 @@
+{
+	"name": "swiip",
+	"type": "module",
+	"version": "1.0.0",
+	"scripts": {
+		"dev": "astro dev",
+		"start": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
+		"astro": "astro",
+		"test": "vitest run",
+		"lint": "eslint .",
+		"types": "tsc"
+	},
+	"dependencies": {
+		"@astrojs/tailwind": "5.0.0",
+		"astro": "3.0.7",
+		"tailwindcss": "3.3.3"
+	},
+	"devDependencies": {
+		"typescript": "5.2.2",
+		"vitest": "0.34.3",
+		"tsconfig": "workspace:*",
+		"eslint-config-custom": "workspace:*"
+	}
+}
