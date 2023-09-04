@@ -14,7 +14,7 @@ parserOptions:
 
 extends:
     - eslint:recommended
-    - plugin:@typescript-eslint/strict-type-checked
+    - plugin:@typescript-eslint/strict
     - plugin:astro/recommended
     - plugin:import/recommended
     - plugin:import/typescript

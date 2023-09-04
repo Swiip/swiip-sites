@@ -1,0 +1,45 @@
+---
+import { useStoryblokApi, type ISbStories, type ISbStory } from "@storyblok/astro"
+import StoryblokComponent from "@storyblok/astro/StoryblokComponent.astro"
+
+export const getStaticPaths = async () => {
+	const sbApi = useStoryblokApi()
+
+	const { data }: ISbStories = await sbApi.get("cdn/stories", {
+		content_type: "page",
+		version: import.meta.env.DEV ? "draft" : "published",
+	})
+
+	const stories = Object.values(data.stories)
+
+	return stories.map((story) => {
+		return {
+			params: { path: story.slug === "home" ? undefined : story.slug },
+			props: { slug: story.slug },
+		}
+	})
+}
+
+const sbApi = useStoryblokApi()
+const { slug } = Astro.props
+
+const { data }: ISbStory = await sbApi.get(`cdn/stories/${slug}`, {
+	version: import.meta.env.DEV ? "draft" : "published",
+})
+
+const story = data.story
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+	</head>
+	<body>
+		<h1 class="bg-red-500 text-3xl">Astro</h1>
+		<StoryblokComponent blok={story.content} />
+	</body>
+</html>
