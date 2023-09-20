@@ -1,13 +1,16 @@
 ---
 import { storyblokEditable, renderRichText } from "@storyblok/astro"
+import TestAstro from "../../components/test.astro"
+import TestSvelte from "../../components/test.svelte"
 
 const { blok } = Astro.props
-const content = renderRichText(blok.content)
 ---
 
 <section {...storyblokEditable(blok)}>
 	<h1>{blok.title}</h1>
 	<h2>{blok.subtitle}</h2>
 	<p>{blok.description}</p>
-	<Fragment set:html={content} />
+	<Fragment set:html={renderRichText(blok.content)} />
+	<TestAstro />
+	<TestSvelte />
 </section>

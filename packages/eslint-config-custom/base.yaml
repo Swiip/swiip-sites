@@ -32,6 +32,8 @@ overrides:
           parser: "@typescript-eslint/parser"
           extraFileExtensions:
               - .astro
+      env:
+          node: true
 
 rules:
     prettier/prettier:

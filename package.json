@@ -6,7 +6,8 @@
 	"scripts": {
 		"ci": "turbo run lint types test",
 		"lint": "turbo run lint",
-		"test": "turbo run test"
+		"test": "turbo run test",
+		"up": "pnpm up --latest --recursive"
 	},
 	"keywords": [
 		"monorepo",
@@ -18,6 +19,6 @@
 	"devDependencies": {
 		"prettier": "3.0.3",
 		"prettier-plugin-astro": "0.12.0",
-		"turbo": "1.10.13"
+		"turbo": "1.10.14"
 	}
 }
