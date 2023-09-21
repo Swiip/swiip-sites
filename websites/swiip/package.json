@@ -10,12 +10,16 @@
 		"astro": "astro",
 		"test": "vitest run",
 		"lint": "eslint .",
-		"types": "tsc"
+		"types": "tsc",
+		"sb:pull": "storyblok pull-components --space 247727 --path src/storyblok/",
+		"sb:types": "storyblok-generate-ts source=src/storyblok/components.247727.json target=src/storyblok/types"
 	},
 	"dependencies": {
 		"@astrojs/svelte": "4.0.2",
 		"@astrojs/tailwind": "5.0.0",
 		"@astrojs/vercel": "5.0.1",
+		"@skeletonlabs/skeleton": "2.1.0",
+		"@skeletonlabs/tw-plugin": "0.2.0",
 		"@storyblok/astro": "3.0.1",
 		"@storyblok/js": "2.3.0",
 		"astro": "3.1.1",
@@ -25,6 +29,8 @@
 	},
 	"devDependencies": {
 		"eslint-config-custom": "workspace:*",
+		"storyblok": "3.25.2",
+		"storyblok-generate-ts": "1.15.1",
 		"tsconfig": "workspace:*",
 		"typescript": "5.2.2",
 		"vitest": "0.34.4"

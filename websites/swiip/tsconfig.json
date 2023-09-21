@@ -1,12 +1,7 @@
 {
 	"extends": "tsconfig/base.json",
 	"compilerOptions": {
-		// "skipLibCheck": true,
-		// "baseUrl": ".",
-		// "typeRoots": ["node_modules/@types", "node_modules/astro/dist/@types"],
 		"moduleResolution": "node"
 	},
-	// "exclude": ["node_modules", "../../node_modules", "**/node_modules/**/*"],
-	// "include": ["src/**/*"],
 	"exclude": ["node_modules/astro/components"]
 }

@@ -1,0 +1,14 @@
+---
+import type { SbBlokData } from "@storyblok/astro"
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-expect-error
+import StoryblokComponent from "@storyblok/astro/StoryblokComponent.astro"
+
+export type Props = SbBlokData & {
+	bloks?: SbBlokData[]
+}
+
+const { bloks } = Astro.props
+---
+
+{bloks?.map((blok) => <StoryblokComponent blok={blok} />)}

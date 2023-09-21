@@ -2,6 +2,9 @@
 import { storyblokEditable, renderRichText } from "@storyblok/astro"
 import TestAstro from "../../components/test.astro"
 import TestSvelte from "../../components/test.svelte"
+import type { HeroStoryblok } from "../types"
+
+export type Props = { blok: HeroStoryblok }
 
 const { blok } = Astro.props
 ---

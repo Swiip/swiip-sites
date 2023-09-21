@@ -1,5 +1,7 @@
 ---
 import { useStoryblokApi, type ISbStories, type ISbStory } from "@storyblok/astro"
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-expect-error
 import StoryblokComponent from "@storyblok/astro/StoryblokComponent.astro"
 
 export const getStaticPaths = async () => {
@@ -30,7 +32,7 @@ const { data }: ISbStory = await sbApi.get(`cdn/stories/${slug}`, {
 const story = data.story
 ---
 
-<html lang="en">
+<html lang="en" class="dark">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -38,7 +40,7 @@ const story = data.story
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro</title>
 	</head>
-	<body>
+	<body data-theme="gold-nouveau">
 		<h1 class="bg-red-500 text-3xl">Astro</h1>
 		<StoryblokComponent blok={story.content} />
 	</body>

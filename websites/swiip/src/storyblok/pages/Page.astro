@@ -1,20 +1,13 @@
 ---
-import { storyblokEditable, type SbBlokData } from "@storyblok/astro"
-import StoryblokComponent from "@storyblok/astro/StoryblokComponent.astro"
+import { storyblokEditable } from "@storyblok/astro"
+import Bloks from "../../components/Bloks.astro"
+import type { PageStoryblok } from "../types"
 
-export type Props = SbBlokData & {
-	blok: {
-		body?: SbBlokData[]
-	}
-}
+export type Props = PageStoryblok
 
 const { blok } = Astro.props
 ---
 
 <main {...storyblokEditable(blok)}>
-	{
-		blok.body?.map((blok) => {
-			return <StoryblokComponent blok={blok} />
-		})
-	}
+	{(<Bloks bloks={blok.body} />)}
 </main>

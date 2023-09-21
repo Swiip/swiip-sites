@@ -1,0 +1,12 @@
+---
+import type { HTMLTag } from "astro/types"
+import type { TitleStoryblok } from "../types"
+
+export type Props = { blok: TitleStoryblok }
+
+const { blok } = Astro.props
+
+const Tag = `h${blok.level}` as HTMLTag
+---
+
+<Tag class={Tag}>{blok.text}</Tag>

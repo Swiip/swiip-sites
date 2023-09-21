@@ -1,0 +1,12 @@
+---
+import type { LinkStoryblok } from "../types"
+
+export type Props = { blok: LinkStoryblok }
+
+const { blok } = Astro.props
+---
+
+<a class="anchor" href={blok.link?.url}>
+	{!!blok.icon && <img src={blok.icon.filename} class="h-5 w-5" alt="" />}
+	{!!blok.text && blok.text}
+</a>

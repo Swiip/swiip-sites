@@ -1,0 +1,18 @@
+---
+import { AppBar } from "@skeletonlabs/skeleton"
+import Bloks from "../../components/Bloks.astro"
+import type { HeaderStoryblok } from "../types"
+
+export type Props = { blok: HeaderStoryblok }
+
+const { blok } = Astro.props
+---
+
+<header>
+	<AppBar>
+		<Bloks slot="lead" bloks={blok.lead} />
+		<Bloks bloks={blok.title} />
+		<Bloks slot="trail" bloks={blok.trail} />
+		<Bloks slot="headline" bloks={blok.headline} />
+	</AppBar>
+</header>
