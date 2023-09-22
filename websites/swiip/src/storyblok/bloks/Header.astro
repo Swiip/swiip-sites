@@ -10,9 +10,9 @@ const { blok } = Astro.props
 
 <header>
 	<AppBar>
-		<Bloks slot="lead" bloks={blok.lead} />
-		<Bloks bloks={blok.title} />
-		<Bloks slot="trail" bloks={blok.trail} />
-		<Bloks slot="headline" bloks={blok.headline} />
+		{!!blok.lead && <Bloks slot="lead" bloks={blok.lead} />}
+		{!!blok.title && <Bloks bloks={blok.title} />}
+		{!!blok.trail && <Bloks slot="trail" bloks={blok.trail} />}
+		{!!blok.headline && <Bloks slot="headline" bloks={blok.headline} />}
 	</AppBar>
 </header>
