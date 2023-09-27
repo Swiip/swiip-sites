@@ -18,6 +18,10 @@ export default defineConfig({
 		storyblok({
 			accessToken: env.STORYBLOK_TOKEN,
 			bridge: true,
+			apiOptions: {
+				cache: "none",
+				fetch: (url, options) => fetch(url, { ...options, cache: "no-store" }),
+			},
 			components: {
 				page: "storyblok/pages/Page",
 				title: "storyblok/bloks/Title",

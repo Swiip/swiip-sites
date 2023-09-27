@@ -9,7 +9,8 @@ const { path: inputPath } = Astro.params
 const path = inputPath === undefined ? "home" : inputPath
 
 const { data }: ISbStory = await sbApi.get(`cdn/stories/${path}`, {
-	version: import.meta.env.DEV ? "draft" : "published",
+	// version: import.meta.env.DEV ? "draft" : "published",
+	version: "draft",
 })
 
 console.log("render page", path, data.story.content.body[0])
