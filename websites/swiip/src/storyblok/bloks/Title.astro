@@ -1,5 +1,5 @@
 ---
-import { storyblokEditable } from "@storyblok/astro"
+import { storyblokEditable, renderRichText } from "@storyblok/astro"
 import type { HTMLTag } from "astro/types"
 import type { TitleStoryblok } from "../types"
 
@@ -7,7 +7,18 @@ export type Props = { blok: TitleStoryblok }
 
 const { blok } = Astro.props
 
-const Tag = `h${blok.level}` as HTMLTag
+const mapping = {
+	1: "h1",
+	2: "h2",
+	3: "h3",
+	4: "h4",
+	5: "h5",
+	6: "h6",
+}
+
+const Tag = (mapping[blok.level as unknown as keyof typeof mapping] || "h6") as HTMLTag
 ---
 
-<Tag class={Tag} {...storyblokEditable(blok)}>{blok.text}</Tag>
+<Tag class={Tag} {...storyblokEditable(blok)}>
+	<Fragment set:html={renderRichText(blok.text)} />
+</Tag>

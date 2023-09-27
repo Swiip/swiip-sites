@@ -1,0 +1,15 @@
+---
+import { storyblokEditable } from "@storyblok/astro"
+import type { ButtonGroupStoryblok } from "../types"
+import Bloks from "../../components/Bloks.astro"
+
+export type Props = { blok: ButtonGroupStoryblok }
+
+const { blok } = Astro.props
+
+const vertical = blok.vertical ? "btn-group-vertical" : ""
+---
+
+<div class={`btn-group variant-filled ${vertical}`} {...storyblokEditable(blok)}>
+	<Bloks bloks={blok.buttons} />
+</div>

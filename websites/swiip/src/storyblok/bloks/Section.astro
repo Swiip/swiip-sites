@@ -1,0 +1,18 @@
+---
+import { storyblokEditable } from "@storyblok/astro"
+import type { ButtonStoryblok } from "../types"
+import Bloks from "../../components/Bloks.astro"
+
+export type Props = { blok: ButtonStoryblok }
+
+const { blok } = Astro.props
+
+const vertical = blok.vertical_layout ? "flex-col" : "flex-row"
+---
+
+<section
+	class={`container flex items-center justify-center m-auto py-8 gap-4 ${vertical}`}
+	{...storyblokEditable(blok)}
+>
+	<Bloks bloks={blok.content} />
+</section>

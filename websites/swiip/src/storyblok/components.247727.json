@@ -1,6 +1,70 @@
 {
   "components": [
     {
+      "name": "button",
+      "display_name": null,
+      "created_at": "2023-09-27T20:48:15.769Z",
+      "updated_at": "2023-09-27T20:49:56.905Z",
+      "id": 4639418,
+      "schema": {
+        "variant": {
+          "type": "text",
+          "pos": 0
+        },
+        "size": {
+          "type": "text",
+          "pos": 1
+        },
+        "label": {
+          "type": "richtext",
+          "pos": 2
+        },
+        "url": {
+          "type": "multilink",
+          "pos": 3
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "button",
+      "component_group_uuid": null,
+      "color": null,
+      "icon": null
+    },
+    {
+      "name": "button_group",
+      "display_name": "Button Group",
+      "created_at": "2023-09-27T20:47:02.314Z",
+      "updated_at": "2023-09-27T20:47:48.274Z",
+      "id": 4639417,
+      "schema": {
+        "vertical_layout": {
+          "type": "boolean",
+          "pos": 0
+        },
+        "buttons": {
+          "type": "bloks",
+          "pos": 1
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "Button Group",
+      "component_group_uuid": null,
+      "color": null,
+      "icon": null
+    },
+    {
       "name": "header",
       "display_name": null,
       "created_at": "2023-09-21T10:04:14.185Z",
@@ -28,38 +92,6 @@
       "all_presets": [],
       "preset_id": null,
       "real_name": "header",
-      "component_group_uuid": null,
-      "color": null,
-      "icon": null
-    },
-    {
-      "name": "hero",
-      "display_name": null,
-      "created_at": "2023-09-04T19:23:15.049Z",
-      "updated_at": "2023-09-04T19:24:41.615Z",
-      "id": 4522943,
-      "schema": {
-        "title": {
-          "type": "text"
-        },
-        "subtitle": {
-          "type": "text"
-        },
-        "description": {
-          "type": "text"
-        },
-        "content": {
-          "type": "richtext"
-        }
-      },
-      "image": null,
-      "preview_field": null,
-      "is_root": false,
-      "preview_tmpl": null,
-      "is_nestable": true,
-      "all_presets": [],
-      "preset_id": null,
-      "real_name": "hero",
       "component_group_uuid": null,
       "color": null,
       "icon": null
@@ -117,14 +149,63 @@
       "icon": null
     },
     {
+      "name": "section",
+      "display_name": "Section",
+      "created_at": "2023-09-27T20:44:10.927Z",
+      "updated_at": "2023-09-27T20:45:38.927Z",
+      "id": 4639416,
+      "schema": {
+        "vertical_layout": {
+          "type": "boolean"
+        },
+        "content": {
+          "type": "bloks"
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "Section",
+      "component_group_uuid": null,
+      "color": null,
+      "icon": null
+    },
+    {
+      "name": "text",
+      "display_name": null,
+      "created_at": "2023-09-27T21:18:40.837Z",
+      "updated_at": "2023-09-27T21:18:54.484Z",
+      "id": 4639538,
+      "schema": {
+        "text": {
+          "type": "richtext"
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "text",
+      "component_group_uuid": null,
+      "color": null,
+      "icon": null
+    },
+    {
       "name": "title",
       "display_name": null,
       "created_at": "2023-09-21T10:08:24.905Z",
-      "updated_at": "2023-09-21T10:42:25.594Z",
+      "updated_at": "2023-09-27T21:26:53.820Z",
       "id": 4607935,
       "schema": {
         "text": {
-          "type": "text"
+          "type": "richtext"
         },
         "level": {
           "type": "number",

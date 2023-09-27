@@ -1,0 +1,12 @@
+---
+import { storyblokEditable, renderRichText } from "@storyblok/astro"
+import type { TextStoryblok } from "../types"
+
+export type Props = { blok: TextStoryblok }
+
+const { blok } = Astro.props
+---
+
+<p {...storyblokEditable(blok)}>
+	<Fragment set:html={renderRichText(blok.text)} />
+</p>

@@ -1,0 +1,16 @@
+---
+import { storyblokEditable, renderRichText } from "@storyblok/astro"
+import type { ButtonStoryblok } from "../types"
+
+export type Props = { blok: ButtonStoryblok }
+
+const { blok } = Astro.props
+---
+
+<a
+	class={`btn btn-${blok.size} variant-${blok.variant}`}
+	href={blok.link?.url}
+	{...storyblokEditable(blok)}
+>
+	<Fragment set:html={renderRichText(blok.label)} />
+</a>

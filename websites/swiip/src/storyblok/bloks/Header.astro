@@ -9,6 +9,12 @@ export type Props = { blok: HeaderStoryblok }
 const { blok } = Astro.props
 ---
 
+<style is:global>
+	.app-bar-row-headline:empty {
+		display: none;
+	}
+</style>
+
 <header {...storyblokEditable(blok)}>
 	<AppBar>
 		{!!blok.lead && <Bloks slot="lead" bloks={blok.lead} />}

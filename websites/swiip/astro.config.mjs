@@ -25,9 +25,12 @@ export default defineConfig({
 			components: {
 				page: "storyblok/pages/Page",
 				title: "storyblok/bloks/Title",
+				text: "storyblok/bloks/Text",
 				link: "storyblok/bloks/Link",
 				header: "storyblok/bloks/Header",
-				hero: "storyblok/bloks/Hero",
+				button: "storyblok/bloks/Button",
+				button_group: "storyblok/bloks/ButtonGroup",
+				section: "storyblok/bloks/Section",
 			},
 		}),
 		svelte(),
