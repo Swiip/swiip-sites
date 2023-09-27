@@ -17,6 +17,7 @@ export default defineConfig({
 		}),
 		storyblok({
 			accessToken: env.STORYBLOK_TOKEN,
+			bridge: true,
 			components: {
 				page: "storyblok/pages/Page",
 				title: "storyblok/bloks/Title",

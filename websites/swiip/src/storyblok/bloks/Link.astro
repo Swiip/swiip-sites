@@ -1,4 +1,5 @@
 ---
+import { storyblokEditable } from "@storyblok/astro"
 import type { LinkStoryblok } from "../types"
 
 export type Props = { blok: LinkStoryblok }
@@ -6,7 +7,7 @@ export type Props = { blok: LinkStoryblok }
 const { blok } = Astro.props
 ---
 
-<a class="anchor" href={blok.link?.url}>
+<a class="anchor" href={blok.link?.url} {...storyblokEditable(blok)}>
 	{!!blok.icon && <img src={blok.icon.filename} class="h-5 w-5" alt="" />}
 	{!!blok.text && blok.text}
 </a>

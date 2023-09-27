@@ -1,4 +1,5 @@
 ---
+import { storyblokEditable } from "@storyblok/astro"
 import { AppBar } from "@skeletonlabs/skeleton"
 import Bloks from "../../components/Bloks.astro"
 import type { HeaderStoryblok } from "../types"
@@ -8,7 +9,7 @@ export type Props = { blok: HeaderStoryblok }
 const { blok } = Astro.props
 ---
 
-<header>
+<header {...storyblokEditable(blok)}>
 	<AppBar>
 		{!!blok.lead && <Bloks slot="lead" bloks={blok.lead} />}
 		{!!blok.title && <Bloks bloks={blok.title} />}

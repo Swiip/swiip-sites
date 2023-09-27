@@ -12,6 +12,8 @@ const { data }: ISbStory = await sbApi.get(`cdn/stories/${path}`, {
 	version: import.meta.env.DEV ? "draft" : "published",
 })
 
+console.log("render page", path, data.story.content.body[0])
+
 const story = data.story
 ---
 
