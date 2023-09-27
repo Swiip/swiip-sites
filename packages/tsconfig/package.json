@@ -1,6 +1,6 @@
 {
 	"name": "tsconfig",
 	"dependencies": {
-		"astro": "3.1.1"
+		"astro": "3.1.4"
 	}
 }

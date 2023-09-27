@@ -1,31 +1,14 @@
 ---
-import { useStoryblokApi, type ISbStories, type ISbStory } from "@storyblok/astro"
+import { useStoryblokApi, type ISbStory } from "@storyblok/astro"
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-expect-error
 import StoryblokComponent from "@storyblok/astro/StoryblokComponent.astro"
 
-export const getStaticPaths = async () => {
-	const sbApi = useStoryblokApi()
-
-	const { data }: ISbStories = await sbApi.get("cdn/stories", {
-		content_type: "page",
-		version: import.meta.env.DEV ? "draft" : "published",
-	})
-
-	const stories = Object.values(data.stories)
-
-	return stories.map((story) => {
-		return {
-			params: { path: story.slug === "home" ? undefined : story.slug },
-			props: { slug: story.slug },
-		}
-	})
-}
-
 const sbApi = useStoryblokApi()
-const { slug } = Astro.props
+const { path: inputPath } = Astro.params
+const path = inputPath === undefined ? "home" : inputPath
 
-const { data }: ISbStory = await sbApi.get(`cdn/stories/${slug}`, {
+const { data }: ISbStory = await sbApi.get(`cdn/stories/${path}`, {
 	version: import.meta.env.DEV ? "draft" : "published",
 })
 

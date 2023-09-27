@@ -18,11 +18,11 @@
 		"@astrojs/svelte": "4.0.2",
 		"@astrojs/tailwind": "5.0.0",
 		"@astrojs/vercel": "5.0.1",
-		"@skeletonlabs/skeleton": "2.1.0",
-		"@skeletonlabs/tw-plugin": "0.2.0",
+		"@skeletonlabs/skeleton": "2.2.0",
+		"@skeletonlabs/tw-plugin": "0.2.1",
 		"@storyblok/astro": "3.0.1",
 		"@storyblok/js": "2.3.0",
-		"astro": "3.1.1",
+		"astro": "3.1.4",
 		"svelte": "4.2.1",
 		"tailwindcss": "3.3.3",
 		"vite": "4.4.9"
@@ -33,6 +33,6 @@
 		"storyblok-generate-ts": "1.15.1",
 		"tsconfig": "workspace:*",
 		"typescript": "5.2.2",
-		"vitest": "0.34.4"
+		"vitest": "0.34.5"
 	}
 }
